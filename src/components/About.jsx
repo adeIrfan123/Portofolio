@@ -23,7 +23,7 @@ function About() {
   return (
     <section
       id="about"
-      className="relative bg-gradient-to-br from-[#1e1e24] via-[#23232b] to-[#2d2d35] min-h-screen px-6 md:px-20 py-20 text-white flex flex-col items-center overflow-hidden"
+      className="relative mt-40 md:mt-0 bg-gradient-to-br from-[#1e1e24] via-[#23232b] to-[#2d2d35] min-h-screen px-6 md:px-20 py-20 text-white flex flex-col items-center overflow-hidden"
     >
       <div className="absolute top-20 -left-20 w-72 h-72 bg-amber-500 opacity-20 blur-[150px] rounded-full"></div>
       <div className="absolute bottom-20 -right-20 w-72 h-72 bg-yellow-400 opacity-20 blur-[150px] rounded-full"></div>

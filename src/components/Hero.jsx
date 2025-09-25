@@ -1,6 +1,7 @@
 import React from "react";
 import irfanJpg from "../assets/MuhamadIrfan.png";
 import bgImage from "../assets/bg.png";
+import DownloadCV from "./DownloadCv";
 
 function Hero() {
   return (
@@ -35,7 +36,7 @@ function Hero() {
         />
       </div>
 
-      <div className="mt-6 sm:mt-10 lg:mt-0 flex flex-col items-center sm:items-center lg:items-start text-center sm:text-center lg:text-left">
+      <div className=" flex flex-col mt-6 sm:mt-80 lg:mt-0 items-center lg:items-start text-center lg:text-left z-20 relative">
         <p className="text-gray-200 text-xl sm:text-2xl lg:text-4xl w-full sm:w-3/4 lg:w-80 font-semibold">
           Web Front End <span className="text-amber-300">Developer</span>
         </p>
@@ -43,6 +44,7 @@ function Hero() {
           Merancang antarmuka web yang interaktif, elegan, dan futuristik dengan
           sentuhan teknologi modern.
         </p>
+        <DownloadCV />
       </div>
     </div>
   );
