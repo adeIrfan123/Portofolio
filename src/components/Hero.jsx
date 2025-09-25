@@ -2,6 +2,7 @@ import React from "react";
 import irfanJpg from "../assets/MuhamadIrfan.png";
 import bgImage from "../assets/bg.png";
 import DownloadCV from "./DownloadCv";
+import { Typewriter } from "react-simple-typewriter";
 
 function Hero() {
   return (
@@ -38,7 +39,16 @@ function Hero() {
 
       <div className=" flex flex-col mt-6 sm:mt-80 lg:mt-0 items-center lg:items-start text-center lg:text-left z-20 relative">
         <p className="text-gray-200 text-xl sm:text-2xl lg:text-4xl w-full sm:w-3/4 lg:w-80 font-semibold">
-          Web Front End <span className="text-amber-300">Developer</span>
+          <Typewriter
+            words={["Web Front End", "React.Js", "UI/UX Enthusiast"]}
+            loop={0}
+            cursor
+            cursorStyle="|"
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={1500}
+          />{" "}
+          <span className="text-amber-300">Developer</span>
         </p>
         <p className="text-gray-200/70 w-full sm:w-3/4 lg:w-80 mt-2 sm:mt-4 lg:mt-4 text-sm sm:text-base lg:text-lg">
           Merancang antarmuka web yang interaktif, elegan, dan futuristik dengan
