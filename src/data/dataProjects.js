@@ -27,7 +27,7 @@ export const dataProjects = [
     description: "Membuat chat bot sederhana dengan model gemini ai flash",
     image: imgChatBot,
     tech: ["Html, Css, JavaScript, NodeJs, ExpressJs"],
-    source: "https://github.com/adeIrfan123/Front-end-warung-film",
+    source: "https://github.com/adeIrfan123/s5-chatbot.git",
     linkDemo: "",
   },
   {
