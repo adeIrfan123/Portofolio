@@ -1,6 +1,7 @@
 import imgMsib from "../assets/certificate/imgCertificateMSIB.jpg";
 import imgUi from "../assets/certificate/imgUi.jpg";
 import imgSeo from "../assets/certificate/imgSeo.jpg";
+import imgBnsp from "../assets/certificate/sertifikat-bnsp.jpg.jpg";
 export const dataCertificates = [
   {
     title: "ReactJs Front End Website Developer",
@@ -22,5 +23,12 @@ export const dataCertificates = [
     date: "2024",
     image: imgSeo,
     link: "https://drive.google.com/file/d/1SfHxiaBHZLJdFAYjiE5uBdwjXwEphVUA/view?usp=drive_link",
+  },
+  {
+    title: "Sertifikat BNSP Pengembangan Front End",
+    issuer: "Lembaga Sertifikasi Profesi Teknologi Informasi Bisnis Digital",
+    date: "2026-2029",
+    image: imgBnsp,
+    link: "https://drive.google.com/file/d/1TfmiSUItSRXgxUm1VzpmPfIOxECidBhM/view?usp=drive_link",
   },
 ];
