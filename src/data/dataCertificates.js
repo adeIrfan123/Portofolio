@@ -1,7 +1,7 @@
 import imgMsib from "../assets/certificate/imgCertificateMSIB.jpg";
 import imgUi from "../assets/certificate/imgUi.jpg";
 import imgSeo from "../assets/certificate/imgSeo.jpg";
-import imgBnsp from "../assets/certificate/sertifikat-bnsp.jpg.jpg";
+import imgBnsp from "../assets/certificate/sertifikat-bnsp.jpg";
 export const dataCertificates = [
   {
     title: "ReactJs Front End Website Developer",
