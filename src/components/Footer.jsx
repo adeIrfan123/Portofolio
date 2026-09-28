@@ -34,7 +34,7 @@ function Footer() {
 
             <div className="flex justify-end gap-4">
               <a
-                href="https://github.com"
+                href="https://github.com/adeIrfan123"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transition-colors hover:text-amber-600"
@@ -43,7 +43,7 @@ function Footer() {
               </a>
 
               <a
-                href="https://www.linkedin.com"
+                href="https://www.linkedin.com/in/muhamad-irfan01/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transition-colors hover:text-amber-600"

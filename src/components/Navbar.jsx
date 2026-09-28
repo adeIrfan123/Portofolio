@@ -124,7 +124,7 @@ function Navbar() {
 
               <li>
                 <a
-                  href="https://www.linkedin.com"
+                  href="https://www.linkedin.com/in/muhamad-irfan01/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="transition-colors hover:text-amber-500"
@@ -135,7 +135,7 @@ function Navbar() {
 
               <li>
                 <a
-                  href="https://github.com"
+                  href="https://github.com/adeIrfan123"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="transition-colors hover:text-amber-500"
