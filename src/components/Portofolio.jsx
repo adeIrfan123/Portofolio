@@ -10,98 +10,107 @@ function Portofolio() {
   return (
     <section
       id="my-projects"
-      className="relative bg-gradient-to-br from-[#1e1e24] via-[#23232b] to-[#2d2d35] py-20 px-6 md:px-20 min-h-screen overflow-hidden"
+      className="bg-[#f5f3ed] px-6 py-24 text-black lg:px-14"
     >
-      <div className="absolute top-20 -left-20 w-72 h-72 bg-amber-500 opacity-20 blur-[150px] rounded-full"></div>
-      <div className="absolute bottom-20 -right-20 w-72 h-72 bg-yellow-400 opacity-20 blur-[150px] rounded-full"></div>
+      <div className="mx-auto max-w-[1600px]">
+        <div className="flex items-end justify-between border-b-4 border-black pb-5">
+          <div>
+            <span className="font-sans text-[10px] font-bold uppercase tracking-[0.25em] text-black/50">
+              Section 02
+            </span>
 
-      <div className="text-center mb-16 relative z-10">
-        <div className="flex justify-center text-5xl gap-5">
-          <h2 className="text-5xl font-extrabold tracking-tight leading-[1.2] bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-500 bg-clip-text text-transparent mb-6 pt-2">
-            My Projects
-          </h2>
-          <span className="pt-3">🚀</span>
+            <h2 className="mt-2 font-serif text-6xl font-black tracking-[-0.05em] sm:text-7xl lg:text-9xl">
+              Projects
+            </h2>
+          </div>
+
+          <span className="hidden font-serif text-5xl italic text-black/20 md:block">
+            02
+          </span>
         </div>
 
-        <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-          Berikut beberapa hasil project dan sertifikat yang telah saya raih 🚀
-        </p>
-      </div>
+        <div className="flex items-center justify-between border-b border-black/20 py-5">
+          <p className="font-serif text-lg text-black/60">
+            Selected works & digital experiments
+          </p>
 
-      <div className="mb-10 flex px-14 gap-10 text-lg font-semibold justify-center">
-        <button
-          onClick={() => setActiveTab("projects")}
-          className={`px-6 py-2 rounded-full transition ${
-            activeTab === "projects"
-              ? "bg-amber-400 text-black shadow-lg"
-              : "bg-white/10 text-white hover:bg-white/20"
-          }`}
-        >
-          Project
-        </button>
-        <button
-          onClick={() => setActiveTab("certificates")}
-          className={`px-6 py-2 rounded-full transition ${
-            activeTab === "certificates"
-              ? "bg-amber-400 text-black shadow-lg"
-              : "bg-white/10 text-white hover:bg-white/20"
-          }`}
-        >
-          Sertifikat
-        </button>
-      </div>
-
-      {activeTab === "projects" ? (
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto relative z-10">
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              className="group relative bg-white/5 border border-white/10 rounded-3xl overflow-hidden shadow-xl backdrop-blur-lg hover:scale-[1.03] transition-all duration-500"
+          <div className="flex gap-2">
+            <button
+              onClick={() => setActiveTab("projects")}
+              className={`px-4 py-2 font-sans text-[10px] font-bold uppercase tracking-widest ${
+                activeTab === "projects"
+                  ? "bg-black text-white"
+                  : "border border-black/20"
+              }`}
             >
-              <div className="overflow-hidden h-56">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-              </div>
+              Projects
+            </button>
 
-              <div className="p-6 flex flex-col h-[260px]">
-                <h3 className="text-2xl font-bold text-amber-300 mb-3">
+            <button
+              onClick={() => setActiveTab("certificates")}
+              className={`px-4 py-2 font-sans text-[10px] font-bold uppercase tracking-widest ${
+                activeTab === "certificates"
+                  ? "bg-black text-white"
+                  : "border border-black/20"
+              }`}
+            >
+              Certificates
+            </button>
+          </div>
+        </div>
+
+        {activeTab === "projects" ? (
+          <div className="grid gap-0 border-l border-black/20 md:grid-cols-2 lg:grid-cols-3">
+            {projects.map((project, index) => (
+              <article
+                key={index}
+                className="group border-b border-r border-black/20 p-5 transition-colors hover:bg-white"
+              >
+                <div className="overflow-hidden border border-black/10">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="aspect-[4/3] w-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0"
+                  />
+                </div>
+
+                <div className="mt-5 flex justify-between font-sans text-[9px] font-bold uppercase tracking-[0.15em] text-black/40">
+                  <span>Project {String(index + 1).padStart(2, "0")}</span>
+
+                  <span>2026</span>
+                </div>
+
+                <h3 className="mt-3 font-serif text-3xl font-black leading-tight">
                   {project.title}
                 </h3>
-                <p className="text-gray-400 mb-4 flex-1">
+
+                <p className="mt-3 font-serif text-sm leading-relaxed text-black/60">
                   {project.description}
                 </p>
 
-                <div className="flex flex-wrap gap-2 mb-5">
+                <div className="mt-5 flex flex-wrap gap-2">
                   {project.tech.map((t, i) => (
                     <span
                       key={i}
-                      className="px-3 py-1 text-sm bg-white/10 text-amber-300 rounded-full border border-amber-300/20"
+                      className="border border-black/20 px-2 py-1 font-sans text-[8px] font-bold uppercase tracking-wider"
                     >
                       {t}
                     </span>
                   ))}
                 </div>
 
-                <div className="flex justify-between items-center">
-                  {project.source && (
+                <div className="mt-6 flex items-center justify-between border-t border-black/10 pt-4">
+                  {project.source ? (
                     <a
                       href={project.source}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-gray-300 hover:text-white transition"
+                      className="font-sans text-[10px] font-bold uppercase tracking-widest hover:text-amber-600"
                     >
-                      {project.source.includes("github.com") ? (
-                        <FaGithub className="text-xl" />
-                      ) : project.source.includes("figma.com") ? (
-                        <SiFigma className="text-xl" />
-                      ) : (
-                        <FaLink className="text-xl" />
-                      )}
-                      <span>Source</span>
+                      View Source →
                     </a>
+                  ) : (
+                    <span />
                   )}
 
                   {project.linkDemo && (
@@ -109,28 +118,22 @@ function Portofolio() {
                       href={project.linkDemo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`flex items-center gap-2 px-4 py-2 rounded-full font-semibold transition-transform ${
-                        project.source
-                          ? "bg-gradient-to-r from-amber-400 to-yellow-500 text-black hover:scale-105"
-                          : "bg-amber-400 text-black hover:scale-105"
-                      }`}
+                      className="bg-amber-300 px-3 py-2 font-sans text-[9px] font-black uppercase tracking-widest text-black hover:bg-black hover:text-white"
                     >
-                      <span>Live Demo</span>
-                      <FaExternalLinkAlt />
+                      Live Demo
                     </a>
                   )}
                 </div>
-              </div>
-
-              <div className="absolute inset-0 bg-gradient-to-b from-amber-400/0 via-yellow-500/0 to-amber-300/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
-            </div>
-          ))}
-        </div>
-      ) : (
-        <Certificates />
-      )}
+              </article>
+            ))}
+          </div>
+        ) : (
+          <div className="py-10">
+            <Certificates />
+          </div>
+        )}
+      </div>
     </section>
   );
 }
-
 export default Portofolio;

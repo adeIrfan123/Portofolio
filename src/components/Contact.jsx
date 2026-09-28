@@ -1,12 +1,5 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
-import {
-  FaEnvelope,
-  FaUser,
-  FaCommentDots,
-  FaBuilding,
-  FaPhone,
-} from "react-icons/fa";
 
 const emailJsServiceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
 const emailJsTemplateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
@@ -24,7 +17,10 @@ function Contact() {
   const [status, setStatus] = useState("");
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
   };
 
   const sendEmail = (e) => {
@@ -34,7 +30,8 @@ function Contact() {
       .send(emailJsServiceId, emailJsTemplateId, formData, emailJsPublicKey)
       .then(
         () => {
-          setStatus("✅ Pesan berhasil dikirim!");
+          setStatus("Pesan berhasil dikirim!");
+
           setFormData({
             name: "",
             email: "",
@@ -44,114 +41,137 @@ function Contact() {
           });
         },
         (error) => {
-          setStatus("❌ Gagal mengirim pesan, coba lagi.");
+          setStatus("Gagal mengirim pesan, coba lagi.");
           console.error(error);
-        }
+        },
       );
   };
 
   return (
-    <div
+    <section
       id="contact"
-      className="flex flex-col items-center justify-center py-24 px-6"
+      className="bg-[#111111] px-6 py-24 text-white lg:px-14"
     >
-      <div className="flex text-5xl gap-5">
-        <h2 className="text-5xl font-extrabold tracking-tight bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-500 bg-clip-text text-transparent mb-10 text-center">
-          Let's chat more
-        </h2>
-        <span>✉️</span>
+      <div className="mx-auto max-w-[1600px]">
+        {/* Header */}
+        <div className="flex items-end justify-between border-b-4 border-white pb-5">
+          <div>
+            <span className="font-sans text-[10px] font-bold uppercase tracking-[0.25em] text-white/40">
+              Section 03
+            </span>
+
+            <h2 className="mt-2 font-serif text-6xl font-black tracking-[-0.05em] sm:text-7xl lg:text-9xl">
+              Contact
+            </h2>
+          </div>
+
+          <span className="hidden font-serif text-5xl italic text-white/10 md:block">
+            03
+          </span>
+        </div>
+
+        <div className="grid gap-14 py-14 lg:grid-cols-[0.8fr_1.2fr]">
+          <div>
+            <span className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-amber-300">
+              Contact Desk
+            </span>
+
+            <h3 className="mt-6 font-serif text-5xl font-black leading-[0.95] lg:text-7xl">
+              Let's create something
+              <span className="text-amber-300"> meaningful.</span>
+            </h3>
+
+            <p className="mt-8 max-w-md font-serif text-lg leading-relaxed text-white/50">
+              Punya project, ide, atau sekadar ingin berdiskusi? Kirimkan pesan
+              melalui form di samping.
+            </p>
+
+            <div className="mt-10 border-t border-white/20 pt-6">
+              <span className="font-sans text-[10px] uppercase tracking-widest text-white/30">
+                Status
+              </span>
+
+              <p className="mt-2 font-serif text-xl">Open for opportunities</p>
+            </div>
+          </div>
+
+          <form onSubmit={sendEmail} className="border-t border-white/20">
+            {[
+              {
+                name: "name",
+                label: "Nama",
+                type: "text",
+                placeholder: "Nama Anda",
+                required: true,
+              },
+              {
+                name: "email",
+                label: "Email",
+                type: "email",
+                placeholder: "email@example.com",
+                required: true,
+              },
+              {
+                name: "company",
+                label: "Perusahaan",
+                type: "text",
+                placeholder: "Nama perusahaan",
+              },
+              {
+                name: "phone",
+                label: "Nomor Telepon",
+                type: "tel",
+                placeholder: "+62...",
+              },
+            ].map((field) => (
+              <div key={field.name} className="border-b border-white/20 py-5">
+                <label className="mb-2 block font-sans text-[9px] font-bold uppercase tracking-[0.2em] text-white/40">
+                  {field.label}
+                </label>
+
+                <input
+                  type={field.type}
+                  name={field.name}
+                  required={field.required}
+                  placeholder={field.placeholder}
+                  value={formData[field.name]}
+                  onChange={handleChange}
+                  className="w-full bg-transparent font-serif text-xl text-white outline-none placeholder:text-white/20"
+                />
+              </div>
+            ))}
+
+            <div className="border-b border-white/20 py-5">
+              <label className="mb-2 block font-sans text-[9px] font-bold uppercase tracking-[0.2em] text-white/40">
+                Pesan
+              </label>
+
+              <textarea
+                name="message"
+                required
+                placeholder="Tulis pesan Anda..."
+                value={formData.message}
+                onChange={handleChange}
+                className="h-32 w-full resize-none bg-transparent font-serif text-xl text-white outline-none placeholder:text-white/20"
+              />
+            </div>
+
+            <div className="flex items-center justify-between pt-6">
+              <button
+                type="submit"
+                className="bg-amber-300 px-6 py-3 font-sans text-xs font-black uppercase tracking-widest text-black transition-colors hover:bg-white"
+              >
+                Send Message →
+              </button>
+
+              {status && (
+                <p className="font-serif text-sm text-white/60">{status}</p>
+              )}
+            </div>
+          </form>
+        </div>
       </div>
-
-      <form
-        onSubmit={sendEmail}
-        className="w-full max-w-lg bg-white shadow-xl rounded-2xl p-10 border border-gray-100"
-      >
-        {/* Name */}
-        <div className="mb-6">
-          <label className="block text-gray-700 font-semibold mb-2">
-            <FaUser className="inline mr-2 text-amber-500" /> Nama
-          </label>
-          <input
-            type="text"
-            name="name"
-            required
-            placeholder="Masukkan nama Anda"
-            value={formData.name}
-            onChange={handleChange}
-            className="w-full px-4 py-3 rounded-lg border focus:outline-none focus:ring-2 focus:ring-amber-400"
-          />
-        </div>
-
-        {/* Email */}
-        <div className="mb-6">
-          <label className="block text-gray-700 font-semibold mb-2">
-            <FaEnvelope className="inline mr-2 text-amber-500" /> Email
-          </label>
-          <input
-            type="email"
-            name="email"
-            required
-            placeholder="Alamat email Anda"
-            value={formData.email}
-            onChange={handleChange}
-            className="w-full px-4 py-3 rounded-lg border focus:outline-none focus:ring-2 focus:ring-amber-400"
-          />
-        </div>
-
-        <div className="mb-6">
-          <label className="block text-gray-700 font-semibold mb-2">
-            <FaBuilding className="inline mr-2 text-amber-500" /> Perusahaan
-          </label>
-          <input
-            type="text"
-            name="company"
-            placeholder="Nama perusahaan (opsional)"
-            value={formData.company}
-            onChange={handleChange}
-            className="w-full px-4 py-3 rounded-lg border focus:outline-none focus:ring-2 focus:ring-amber-400"
-          />
-        </div>
-
-        <div className="mb-6">
-          <label className="block text-gray-700 font-semibold mb-2">
-            <FaPhone className="inline mr-2 text-amber-500" /> Nomor Telepon
-          </label>
-          <input
-            type="tel"
-            name="phone"
-            placeholder="Nomor telepon (opsional)"
-            value={formData.phone}
-            onChange={handleChange}
-            className="w-full px-4 py-3 rounded-lg border focus:outline-none focus:ring-2 focus:ring-amber-400"
-          />
-        </div>
-
-        <div className="mb-6">
-          <label className="block text-gray-700 font-semibold mb-2">
-            <FaCommentDots className="inline mr-2 text-amber-500" /> Pesan
-          </label>
-          <textarea
-            name="message"
-            required
-            placeholder="Tulis pesan Anda..."
-            value={formData.message}
-            onChange={handleChange}
-            className="w-full px-4 py-3 rounded-lg border h-32 resize-none focus:outline-none focus:ring-2 focus:ring-amber-400"
-          ></textarea>
-        </div>
-
-        <button
-          type="submit"
-          className="w-full bg-gradient-to-r from-amber-400 to-yellow-500 hover:from-amber-500 hover:to-yellow-600 text-white font-semibold py-3 rounded-lg shadow-lg transition-all duration-300"
-        >
-          Kirim Pesan 🚀
-        </button>
-
-        {status && (
-          <p className="text-center mt-4 text-gray-700 font-medium">{status}</p>
-        )}
-      </form>
-    </div>
+    </section>
   );
 }
 

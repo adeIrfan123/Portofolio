@@ -4,6 +4,8 @@ import imgMiniEcommer from "../assets/project/miniEcommerce.png";
 import imgChatBot from "../assets/project/chtBot.png";
 import imgUiWebKelinci from "../assets/project/uiWebKelinci.png";
 import imgUiShoppingFood from "../assets/project/uiWebFoodShopping.png";
+import imgDumelDump from "../assets/project/dumelDump.png";
+import imgTheChronicle from "../assets/project/theChronicle.png";
 
 export const dataProjects = [
   {
@@ -37,6 +39,24 @@ export const dataProjects = [
     tech: ["React, TailwindCss, APi (Fake store API)"],
     source: "https://github.com/adeIrfan123/StorePedia",
     linkDemo: "https://storepedia.netlify.app/",
+  },
+  {
+    title: "dumelDump",
+    description:
+      "Web diary digital pribadi yang memungkinkan pengguna menulis, menyimpan dan mengelola catatan harian secara privat dengan fitur enkripsi data untuk menjaga kerahasiaan isi diary.",
+    image: imgDumelDump,
+    tech: ["NextJs, TailwindCss, MySql, encryption"],
+    source: "https://github.com/adeIrfan123/dumel-dump",
+    linkDemo: "https://dumel-dump.vercel.app/",
+  },
+  {
+    title: "The Chronicle",
+    description:
+      "Website SPA berita digital dengan tampilan bergaya koran modern yang menyajikan berita secara terstruktur berdasarkan kategori, lengkap dengan headline, artikel, dan informasi terkini melalui integrasi News API.",
+    image: imgTheChronicle,
+    tech: ["NextJs, TailwindCss, API(Nytimes API)"],
+    source: "https://github.com/adeIrfan123/the-chronicle",
+    linkDemo: "https://the-chronicle-lime.vercel.app/",
   },
   {
     title: "UI/UX Website kelinci",

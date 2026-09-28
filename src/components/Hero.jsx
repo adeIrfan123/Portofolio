@@ -1,62 +1,114 @@
 import React from "react";
 import irfanJpg from "../assets/MuhamadIrfan.png";
-import bgImage from "../assets/bg.png";
 import DownloadCV from "./DownloadCv";
 import { Typewriter } from "react-simple-typewriter";
 
 function Hero() {
   return (
-    <div
+    <section
       id="home"
-      style={{
-        backgroundImage: `url(${bgImage})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-      className="flex flex-col lg:flex-row justify-between mb-30 px-6 sm:px-10 lg:px-35 pt-20 relative h-[650px] sm:h-[750px] lg:h-[920px]"
+      className="min-h-screen bg-[#111111] px-6 pb-20 pt-28 text-white lg:px-14"
     >
-      <div className="flex flex-col mt-6 sm:mt-10 lg:mt-35">
-        <span className="text-gray-300 text-3xl sm:text-4xl lg:text-7xl">
-          I'm
-        </span>
-        <h1 className="text-white text-4xl sm:text-5xl lg:text-7xl mt-2 sm:mt-3">
-          Muhamad Irfan
-        </h1>
-        <div className="bg-amber-300 py-1 w-32 sm:w-36 lg:w-70 mt-6 sm:mt-8 lg:mt-12 rounded-sm"></div>
-        <p className="text-gray-100/60 w-full sm:w-3/4 lg:w-78 mt-3 sm:mt-4 lg:mt-7 text-base sm:text-lg lg:text-2xl">
-          Mahasiswa tingkat akhir jurusan ilmu komputer dengan konsentrasi TPL
-          (Teknologi Perangkat Lunak)
-        </p>
-      </div>
+      <div className="mx-auto max-w-[1600px]">
+        <div className="mb-6 flex flex-col justify-between gap-3 border-b border-white/20 pb-4 font-sans text-[10px] font-bold uppercase tracking-[0.2em] text-white/50 sm:flex-row">
+          <span>Portfolio — Personal Edition</span>
 
-      <div className="md:absolute md:top-60 md:left-70 md:mt-14 lg:absolute lg:left-135 lg:top-24 w-full sm:w-80 lg:w-auto flex justify-center mt-6 sm:mt-10 lg:mt-0">
-        <img
-          src={irfanJpg}
-          alt=""
-          className="w-48 sm:w-56 lg:w-116 rounded-br-[80px] sm:rounded-br-[100px] lg:rounded-br-[170px] rounded-bl-[60px] sm:rounded-bl-[80px] lg:rounded-bl-[150px]"
-        />
-      </div>
+          <span>
+            {new Date().toLocaleDateString("en-US", {
+              weekday: "long",
+              month: "long",
+              day: "numeric",
+              year: "numeric",
+            })}
+          </span>
+        </div>
 
-      <div className=" flex flex-col mt-6 sm:mt-80 lg:mt-0 items-center lg:items-start text-center lg:text-left z-20 relative">
-        <p className="text-gray-200 text-xl sm:text-2xl lg:text-4xl w-full sm:w-3/4 lg:w-80 font-semibold">
-          <Typewriter
-            words={["Web Front End", "React.Js", "UI/UX Enthusiast"]}
-            loop={0}
-            cursor
-            cursorStyle="|"
-            typeSpeed={70}
-            deleteSpeed={50}
-            delaySpeed={1500}
-          />{" "}
-          <span className="text-amber-300">Developer</span>
-        </p>
-        <p className="text-gray-200/70 w-full sm:w-3/4 lg:w-80 mt-2 sm:mt-4 lg:mt-4 text-sm sm:text-base lg:text-lg">
-          Merancang antarmuka web yang interaktif, elegan, dan futuristik dengan
-          sentuhan teknologi modern.
-        </p>
-        <DownloadCV />
+        <div className="border-b-4 border-white py-5 text-center">
+          <h1 className="font-serif text-6xl font-black tracking-[-0.07em] sm:text-8xl lg:text-[11rem] lg:leading-[0.8]">
+            IRFAN
+          </h1>
+        </div>
+
+        <div className="grid border-b border-white/30 py-10 lg:grid-cols-[1.2fr_0.8fr]">
+          <div className="border-white/20 lg:border-r lg:pr-12">
+            <div className="mb-6 flex items-center gap-3">
+              <span className="h-2 w-2 rounded-full bg-amber-400" />
+
+              <span className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-amber-300">
+                Front-End Developer
+              </span>
+            </div>
+
+            <h2 className="max-w-5xl font-serif text-5xl font-black leading-[0.9] tracking-[-0.045em] sm:text-6xl lg:text-8xl">
+              Designing the
+              <br />
+              <span className="text-amber-300">digital experience.</span>
+            </h2>
+
+            <p className="mt-8 max-w-2xl font-serif text-lg leading-relaxed text-white/60 lg:text-xl">
+              Saya membangun antarmuka web yang interaktif, responsif, dan
+              modern menggunakan teknologi web masa kini.
+            </p>
+
+            <div className="mt-8 flex flex-wrap gap-3">
+              <span className="border border-white/30 px-4 py-2 font-sans text-[10px] font-bold uppercase tracking-widest">
+                React.js
+              </span>
+
+              <span className="border border-white/30 px-4 py-2 font-sans text-[10px] font-bold uppercase tracking-widest">
+                Next.js
+              </span>
+
+              <span className="border border-white/30 px-4 py-2 font-sans text-[10px] font-bold uppercase tracking-widest">
+                UI/UX
+              </span>
+            </div>
+          </div>
+
+          <div className="mt-10 lg:mt-0 lg:pl-12">
+            <div className="relative">
+              <img
+                src={irfanJpg}
+                alt="Muhamad Irfan"
+                className="mx-auto aspect-[4/6] w-full max-w-md object-cover "
+              />
+
+              <div className="absolute bottom-4 left-4 bg-amber-300 px-4 py-2 text-black">
+                <span className="font-sans text-[10px] font-black uppercase tracking-widest">
+                  Profile / 2026
+                </span>
+              </div>
+            </div>
+
+            <p className="mt-4 font-serif text-sm italic text-white/40">
+              Muhamad Irfan — Front-End Web Developer
+            </p>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-2 gap-6 py-6 font-sans text-[10px] font-bold uppercase tracking-[0.15em] text-white/40 md:grid-cols-4">
+          <div>
+            <span className="block text-white/20">Focus</span>
+            Web Development
+          </div>
+
+          <div>
+            <span className="block text-white/20">Specialty</span>
+            Front-End
+          </div>
+
+          <div>
+            <span className="block text-white/20">Based</span>
+            Indonesia
+          </div>
+
+          <div>
+            <span className="block text-white/20">Available</span>
+            Open to Work
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
 
