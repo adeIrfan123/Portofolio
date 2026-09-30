@@ -2,8 +2,6 @@ import img89Coffe from "../assets/project/89Coffe.png";
 import imgWarungFilm from "../assets/project/warungFilm.png";
 import imgMiniEcommer from "../assets/project/miniEcommerce.png";
 import imgChatBot from "../assets/project/chtBot.png";
-import imgUiWebKelinci from "../assets/project/uiWebKelinci.png";
-import imgUiShoppingFood from "../assets/project/uiWebFoodShopping.png";
 import imgDumelDump from "../assets/project/dumelDump.png";
 import imgTheChronicle from "../assets/project/theChronicle.png";
 
@@ -57,21 +55,5 @@ export const dataProjects = [
     tech: ["NextJs, TailwindCss, API(Nytimes API)"],
     source: "https://github.com/adeIrfan123/the-chronicle",
     linkDemo: "https://the-chronicle-lime.vercel.app/",
-  },
-  {
-    title: "UI/UX Website kelinci",
-    description: "Prototype UI/UX website kelinci",
-    image: imgUiWebKelinci,
-    tech: ["Figma"],
-    source:
-      "https://www.figma.com/proto/u4ao10QAVeAwPi0wB8JmzX/Ucim-Rabbits?node-id=13-383&p=f&t=95ETgwP8b8pLmAPf-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=13%3A383&show-proto-sidebar=1",
-  },
-  {
-    title: "UI/UX Website shopping food",
-    description: "Prototype UI/UX website shopping food",
-    image: imgUiShoppingFood,
-    tech: ["Figma"],
-    source:
-      "https://www.figma.com/proto/ghFxfBA1YKpWhYcaooaJZ7/Untitled?node-id=15-772&p=f&t=Z8KDy7rBcRIK9KAd-0&scaling=scale-down&content-scaling=responsive&page-id=0%3A1&starting-point-node-id=25%3A179&show-proto-sidebar=1",
   },
 ];
