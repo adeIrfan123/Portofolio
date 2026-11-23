@@ -63,6 +63,8 @@ function Hero() {
                 UI/UX
               </span>
             </div>
+
+            <DownloadCV />
           </div>
 
           <div className="mt-10 lg:mt-0 lg:pl-12">

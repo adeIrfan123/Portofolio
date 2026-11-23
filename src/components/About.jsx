@@ -1,11 +1,16 @@
 import React, { useState } from "react";
+import { GitHub } from "react-feather";
 import {
   FaHtml5,
   FaCss3Alt,
   FaJsSquare,
   FaReact,
   FaLaravel,
+  FaGithub,
+  FaGitAlt,
+  FaFigma,
 } from "react-icons/fa";
+import { RiNextjsFill } from "react-icons/ri";
 import { SiTailwindcss } from "react-icons/si";
 
 function About() {
@@ -16,8 +21,12 @@ function About() {
     { icon: <FaCss3Alt />, name: "CSS", color: "text-blue-500" },
     { icon: <FaJsSquare />, name: "JavaScript", color: "text-yellow-500" },
     { icon: <FaReact />, name: "React.js", color: "text-cyan-500" },
+    { icon: <RiNextjsFill />, name: "Next.js", color: "text-black" },
     { icon: <SiTailwindcss />, name: "Tailwind", color: "text-sky-500" },
     { icon: <FaLaravel />, name: "Laravel", color: "text-red-500" },
+    { icon: <FaGithub />, name: "GitHub", color: "text-black" },
+    { icon: <FaGitAlt />, name: "Git", color: "text-red-500" },
+    { icon: <FaFigma />, name: "Figma", color: "text-black" },
   ];
 
   return (
@@ -133,7 +142,7 @@ function About() {
             {techStacks.map((stack, i) => (
               <div
                 key={i}
-                className="border-b border-r border-black/20 p-6 transition-colors hover:bg-black hover:text-white"
+                className="border-b border-r border-black/20 p-6 transition-colors hover:bg-stone-400 hover:text-white"
               >
                 <div className={`mb-5 text-4xl ${stack.color}`}>
                   {stack.icon}
