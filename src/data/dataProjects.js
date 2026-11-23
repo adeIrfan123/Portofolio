@@ -12,6 +12,7 @@ export const dataProjects = [
     image: img89Coffe,
     tech: ["Laravel, Filament, TailwindCss, JavaScript, MySql"],
     source: "https://github.com/adeIrfan123/Cafe89-app",
+    year: "2025",
     linkDemo: "",
   },
   {
@@ -20,6 +21,7 @@ export const dataProjects = [
     image: imgWarungFilm,
     tech: ["React, TailwindCss, API (TMDB)"],
     source: "https://github.com/adeIrfan123/Front-end-warung-film",
+    year: "2025",
     linkDemo: "https://warung-film.netlify.app/",
   },
   {
@@ -28,7 +30,8 @@ export const dataProjects = [
     image: imgChatBot,
     tech: ["Html, Css, JavaScript, NodeJs, ExpressJs"],
     source: "https://github.com/adeIrfan123/s5-chatbot.git",
-    linkDemo: "",
+    year: "2025",
+    linkDemo: "2025",
   },
   {
     title: "StorePedia",
@@ -36,6 +39,7 @@ export const dataProjects = [
     image: imgMiniEcommer,
     tech: ["React, TailwindCss, APi (Fake store API)"],
     source: "https://github.com/adeIrfan123/StorePedia",
+    year: "2024",
     linkDemo: "https://storepedia.netlify.app/",
   },
   {
@@ -45,6 +49,7 @@ export const dataProjects = [
     image: imgDumelDump,
     tech: ["NextJs, TailwindCss, MySql, encryption"],
     source: "https://github.com/adeIrfan123/dumel-dump",
+    year: "2026",
     linkDemo: "https://dumel-dump.vercel.app/",
   },
   {
@@ -54,6 +59,7 @@ export const dataProjects = [
     image: imgTheChronicle,
     tech: ["NextJs, TailwindCss, API(Nytimes API)"],
     source: "https://github.com/adeIrfan123/the-chronicle",
+    year: "2026",
     linkDemo: "https://the-chronicle-lime.vercel.app/",
   },
 ];

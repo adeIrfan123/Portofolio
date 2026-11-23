@@ -37,7 +37,7 @@ function Portofolio() {
           <div className="flex gap-2">
             <button
               onClick={() => setActiveTab("projects")}
-              className={`px-4 py-2 font-sans text-[10px] font-bold uppercase tracking-widest ${
+              className={`cursor-pointer px-4 py-2 font-sans text-[10px] font-bold uppercase tracking-widest ${
                 activeTab === "projects"
                   ? "bg-black text-white"
                   : "border border-black/20"
@@ -48,7 +48,7 @@ function Portofolio() {
 
             <button
               onClick={() => setActiveTab("certificates")}
-              className={`px-4 py-2 font-sans text-[10px] font-bold uppercase tracking-widest ${
+              className={`cursor-pointer px-4 py-2 font-sans text-[10px] font-bold uppercase tracking-widest ${
                 activeTab === "certificates"
                   ? "bg-black text-white"
                   : "border border-black/20"
@@ -77,7 +77,7 @@ function Portofolio() {
                 <div className="mt-5 flex justify-between font-sans text-[9px] font-bold uppercase tracking-[0.15em] text-black/40">
                   <span>Project {String(index + 1).padStart(2, "0")}</span>
 
-                  <span>2026</span>
+                  <span>{project.year}</span>
                 </div>
 
                 <h3 className="mt-3 font-serif text-3xl font-black leading-tight">

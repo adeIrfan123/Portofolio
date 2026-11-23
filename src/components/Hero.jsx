@@ -1,5 +1,5 @@
 import React from "react";
-import irfanJpg from "../assets/MuhamadIrfan.png";
+import irfanJpg from "../assets/pasfoto.jpg";
 import DownloadCV from "./DownloadCv";
 import { Typewriter } from "react-simple-typewriter";
 
