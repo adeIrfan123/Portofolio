@@ -66,7 +66,7 @@ function Navbar() {
   return (
     <header
       className={`fixed left-0 right-0 top-0 z-50 transition-all duration-300 ${
-        scroll ? "bg-[#f5f3ed]/95 shadow-sm backdrop-blur-sm" : "bg-transparent"
+        scroll ? "bg-[#f5f3ed]/95 shadow-sm backdrop-blur-sm" : "bg-[#111111]"
       }`}
     >
       <div className="mx-auto max-w-[1600px] px-6 lg:px-14">
@@ -155,7 +155,11 @@ function Navbar() {
         </div>
 
         {mobileOpen && (
-          <div className="border-b border-black/20 bg-[#f5f3ed] py-6 md:hidden">
+          <div
+            className={`border-b border-black/20 transition-all duration-300${
+              scroll ? "bg-[#f5f3ed]/95" : "bg-[#111111] text-white"
+            } py-6 md:hidden`}
+          >
             <div className="flex flex-col">
               {sections.map((item) => {
                 const id = item.toLowerCase().replace(" ", "-");
@@ -177,7 +181,10 @@ function Navbar() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <LinkedinIcon size={22} />
+                  <LinkedinIcon
+                    size={22}
+                    className={`${scroll ? "" : "text-white"}`}
+                  />
                 </a>
 
                 <a
@@ -185,7 +192,10 @@ function Navbar() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <GitHubIcon size={22} />
+                  <GitHubIcon
+                    size={22}
+                    className={`${scroll ? "" : "text-white"}`}
+                  />
                 </a>
               </div>
             </div>
