@@ -31,7 +31,7 @@ export const dataProjects = [
     tech: ["Html, Css, JavaScript, NodeJs, ExpressJs"],
     source: "https://github.com/adeIrfan123/s5-chatbot.git",
     year: "2025",
-    linkDemo: "2025",
+    linkDemo: "",
   },
   {
     title: "StorePedia",
